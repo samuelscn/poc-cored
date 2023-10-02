@@ -20,9 +20,10 @@ let homeConfig: configuration = reactive({});
 const hostname = ref('');
 
 onBeforeMount(() => {
-  // hostname.value = window.location.hostname
-  hostname.value = 'www.inst1.com';
-  if (hostname.value === 'localhost') {
+  hostname.value = window.location.hostname
+  // hostname.value = 'www.inst1.com';
+  console.log(hostname.value)
+  if (hostname.value === 'poc-cored.vercel.app') {
     homeConfig = config1;
   } else {
     homeConfig = config2;

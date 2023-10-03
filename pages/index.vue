@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>{{ homeConfig.title }}</h1>
+    <title>{{ homeConfig.title }}</title>
   </header>
   <body>
     <p>{{ homeConfig.body }}</p>
@@ -11,7 +11,6 @@
 const url = useRequestURL()
 
 const { data } = await useFetch(`/api/configurations/${url.hostname}`)
-console.log(data.value.data)
 const homeConfig = reactive(data.value.data);
 // console.log(toRaw(data.value));
 // const { data } = await useAsyncData("configurations", () =>

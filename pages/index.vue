@@ -1,6 +1,7 @@
 <template>
   <header>
     <title>{{ homeConfig.title }}</title>
+    <h1>{{ homeConfig.title }}</h1>
   </header>
   <body>
     <p>{{ homeConfig.body }}</p>
